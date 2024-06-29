@@ -16,10 +16,10 @@ pipeline {
         }
     }
     post {
-        always {
+        failure {
             mail to: 'wildanazzwa@gmail.com',
-                 subject: 'Greeting!',
-                 body: 'Hello World'
+                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "Something is wrong with ${env.BUILD_URL}"
         }
     }
 }
