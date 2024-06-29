@@ -15,4 +15,11 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            mail to: 'wildanazzwa@gmail.com',
+                 subject: 'Greeting!',
+                 body: 'Hello World'
+        }
+    }
 }
