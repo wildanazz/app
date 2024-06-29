@@ -16,6 +16,9 @@ pipeline {
         }
     }
     post {
+        always {
+            echo 'All jobs are done.'
+        }
         failure {
             mail to: 'wildanazzwa@gmail.com',
                  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
