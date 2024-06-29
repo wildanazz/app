@@ -14,10 +14,5 @@ pipeline {
                 sh 'echo "Done."'
             }
         }
-        post {
-            success {
-                echo 'All jobs are done.'
-            }
-        }
     }
 }
